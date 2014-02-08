@@ -2,7 +2,7 @@ Summary:	Riverbanks' python sip
 Name:		python-sip
 Epoch:		1
 Version:	4.15.3
-Release:	5
+Release:	6
 Group:		Development/Python
 License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
