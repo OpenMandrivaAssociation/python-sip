@@ -1,7 +1,7 @@
 Summary:	Riverbanks' python sip
 Name:		python-sip
 Epoch:		1
-Version:	4.15.4
+Version:	4.15.5
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
@@ -40,5 +40,6 @@ done
 
 %install
 %makeinstall_std
+
 
 
