@@ -17,7 +17,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	pkgconfig(python)
 Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
-Provides:	%sip_api
+Provides:	sip-api(%{sip_api_major}) = %{sip_api}
 
 %description
 SIP is a tool that makes it very easy to create Python bindings
