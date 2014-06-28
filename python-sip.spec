@@ -7,7 +7,7 @@ Summary:	Riverbanks' python sip
 Name:		python-sip
 Epoch:		1
 Version:	4.16.1
-Release:	2
+Release:	3
 Group:		Development/Python
 License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
@@ -17,6 +17,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	pkgconfig(python)
 Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
+Provides:	%sip_api
 
 %description
 SIP is a tool that makes it very easy to create Python bindings
