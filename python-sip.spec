@@ -14,7 +14,7 @@ Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
 Source0:	http://downloads.sourceforge.net/pyqt/sip-%{version}.tar.gz
 Source1:	python-sip.rpmlintrc
 BuildRequires:	bzip2-devel
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
 Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
 Provides:	sip-api(%{sip_api_major}) = %{sip_api}
