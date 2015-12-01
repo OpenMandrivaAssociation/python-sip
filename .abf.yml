@@ -1,4 +1,5 @@
 removed_sources:
   sip-4.12.3.tar.gz: 99af6d4fb1ae5e29687bb0ab47dfbb23f36a79b7
-sources:
   sip-4.16.1.tar.gz: e3eb1ebe9b380ed4a7abcf7e0db02f9a2ddf95fc
+sources:
+  sip-4.16.7.tar.gz: ec467c1ca9f9ead16be869eccc2e7cae72750d56
