@@ -42,12 +42,27 @@ export LDFLAGS="%{ldflags} -lpython3.8"
 
 python setup.py \
 	build
+	
+popd
+mkdir python-sip-qt5
+pushd python-sip-qt5
+%{__python} ../configure.py \
+             --sip-module=PyQt5.sip \
+             --no-tools \
+             CXXFLAGS+="%{optflags}" \
+             CFLAGS+="%{optflags}" \
+             LFLAGS+="%{ldflags}" \
+             LIBS="%{?ldflags} -lpython3.8"
+	    
+%make_build
 
 %install
 python setup.py \
 	install \
 	--root="%{buildroot}" \
 	--record="%{name}.list"
+	
+%make_install -C python-sip-qt5
 
 %check
 python setup.py \
