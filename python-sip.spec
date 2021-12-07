@@ -11,6 +11,7 @@ BuildRequires:	pkgconfig(bzip2)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(setuptools)
 Requires:	python3dist(toml)
+Requires:	python-qt-builder
 Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
 %rename		python3-sip
