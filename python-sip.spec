@@ -1,11 +1,11 @@
 Summary:	Tool for creating Python bindings for C and C++ libraries
 Name:		python-sip
-Version:	6.5.0
-Release:	3
+Version:	6.6.0
+Release:	1
 Group:		Development/Python
 License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
-Source0:	https://files.pythonhosted.org/packages/07/4e/0de6d5872145f4cedf187aa8a9069ba91d7e293a82cbbaeabd10c45e9cf0/sip-6.5.0.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/s/sip/sip-%{version}.tar.gz
 Source1:	python-sip.rpmlintrc
 BuildRequires:	pkgconfig(bzip2)
 BuildRequires:	pkgconfig(python3)
@@ -29,8 +29,7 @@ create bindings for any C or C++ library.
 
 #------------------------------------------------------------
 %prep
-%setup -qn sip-%{version}
-%autopatch -p0
+%autosetup -p1 -n sip-%{version}
 
 %build
 %set_build_flags
