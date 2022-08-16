@@ -1,6 +1,6 @@
 Summary:	Tool for creating Python bindings for C and C++ libraries
 Name:		python-sip
-Version:	6.6.0
+Version:	6.6.2
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
@@ -34,7 +34,7 @@ create bindings for any C or C++ library.
 %build
 %set_build_flags
 
-export LDFLAGS="%{ldflags} -lpython%{py_ver}"
+export LDFLAGS="%{build_ldflags} -lpython%{py_ver}"
 %py_build
 
 %install
