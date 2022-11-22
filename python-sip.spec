@@ -9,7 +9,7 @@ Source0:	https://files.pythonhosted.org/packages/source/s/sip/sip-%{version}.tar
 Source1:	python-sip.rpmlintrc
 BuildRequires:	pkgconfig(bzip2)
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(pip)
 Requires:	python3dist(toml)
 #Requires:	python-qt-builder
 Obsoletes:	sip < %{version}
