@@ -16,6 +16,8 @@ Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
 %rename		python3-sip
 
+BuildArch:	noarch
+
 %description
 SIP is a tool that makes it very easy to create Python bindings
 for C and C++ libraries. It was originally developed to create PyQt,
@@ -25,7 +27,7 @@ create bindings for any C or C++ library.
 %files
 %license LICENSE LICENSE-GPL2 LICENSE-GPL3
 %{_bindir}/sip*
-%{py_platsitedir}/sip*
+%{py_puresitedir}/sip*
 
 #------------------------------------------------------------
 %prep
