@@ -1,6 +1,6 @@
 Summary:	Tool for creating Python bindings for C and C++ libraries
 Name:		python-sip
-Version:	6.8.3
+Version:	6.8.4
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
@@ -9,8 +9,8 @@ Source0:	https://files.pythonhosted.org/packages/source/s/sip/sip-%{version}.tar
 Source1:	python-sip.rpmlintrc
 BuildRequires:	pkgconfig(bzip2)
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	python3dist(pip)
-Requires:	python3dist(toml)
+BuildRequires:	python%{pyver}dist(pip)
+Requires:	python%{pyver}dist(toml)
 #Requires:	python-qt-builder
 Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
@@ -25,7 +25,7 @@ the Python bindings for the Qt toolkit, but can be used to
 create bindings for any C or C++ library.
 
 %files
-%license LICENSE LICENSE-GPL2 LICENSE-GPL3
+%license LICENSE
 %{_bindir}/sip*
 %{py_puresitedir}/sip*
 
@@ -40,10 +40,4 @@ export LDFLAGS="%{build_ldflags} -lpython%{py_ver}"
 %py_build
 
 %install
-%{__python} setup.py \
-	install \
-	--root="%{buildroot}" --skip-build --optimize=1
-
-%check
-%{__python} setup.py \
-	check
+%py_install
