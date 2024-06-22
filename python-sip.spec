@@ -10,8 +10,8 @@ Source1:	python-sip.rpmlintrc
 BuildRequires:	pkgconfig(bzip2)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
 Requires:	python%{pyver}dist(toml)
-Requires:	python%{pyver}dist(setuptools_scm)
 #Requires:	python-qt-builder
 Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
