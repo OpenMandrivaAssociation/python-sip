@@ -1,7 +1,7 @@
 Summary:	Tool for creating Python bindings for C and C++ libraries
 Name:		python-sip
 Version:	6.8.4
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	GPLv2+
 Url:		http://www.riverbankcomputing.co.uk/software/sip/intro
@@ -11,10 +11,12 @@ BuildRequires:	pkgconfig(bzip2)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 Requires:	python%{pyver}dist(toml)
+Requires:	python%{pyver}dist(setuptools_scm)
 #Requires:	python-qt-builder
 Obsoletes:	sip < %{version}
 Obsoletes:	sip-devel < %{version}
 %rename		python3-sip
+BuildSystem:	python
 
 BuildArch:	noarch
 
@@ -29,15 +31,7 @@ create bindings for any C or C++ library.
 %{_bindir}/sip*
 %{py_puresitedir}/sip*
 
-#------------------------------------------------------------
-%prep
-%autosetup -p1 -n sip-%{version}
-
-%build
+%build -p
 %set_build_flags
 
 export LDFLAGS="%{build_ldflags} -lpython%{py_ver}"
-%py_build
-
-%install
-%py_install
