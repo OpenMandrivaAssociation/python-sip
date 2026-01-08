@@ -1,6 +1,6 @@
 Summary:	Tool for creating Python bindings for C and C++ libraries
 Name:		python-sip
-Version:	6.15.0
+Version:	6.15.1
 Release:	1
 Group:		Development/Python
 License:	GPLv2+
